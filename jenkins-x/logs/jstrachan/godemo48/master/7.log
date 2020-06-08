@@ -1,0 +1,92 @@
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-klhmg[0m
+{"level":"info","ts":1591604601.7929854,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591604601.7936745,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-kgfdc[0m
+{"level":"info","ts":1591604602.419519,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1591604602.4359627,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-godemo48-master-tnf6s-8twfq[0m
+{"level":"info","ts":1591604607.5276265,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1591604608.7849982,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/jstrachan/godemo48.git @ v0.0.12 in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/godemo48 main.go
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+ERROR: logging before flag.Parse: E0608 08:23:41.279000      11 metadata.go:241] Failed to unmarshal scopes: json: cannot unmarshal string into Go value of type []string
+[36mINFO[0m[0000] Resolved base name scratch to scratch        
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name scratch to scratch        
+[36mINFO[0m[0000] Built cross stage deps: map[]                
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Checking for cached layer gcr.io/jstrachan-multicluster/cache:c1c0f14cce41ec3fdac94be77a534acb80c1357475f87728354e4c3aefe80fd4... 
+[36mINFO[0m[0001] Using caching version of cmd: COPY ./bin/ /  
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] Resolving paths                              
+[36mINFO[0m[0001] EXPOSE 8080                                  
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] ENTRYPOINT ["/godemo48"]                     
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0001] COPY ./bin/ /                                
+[36mINFO[0m[0001] Found cached layer, extracting to filesystem 
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/godemo48 to an unshallow repository
+Generating change log from git ref 9147d50dad972b33e28691604a413570079c1c79 => 149e312ed516ac1a228c52ee2294ae8bbcb04cc8
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit a50087e07e01a4ed5a76de03cdfb30e53368e33a with issues: User.jenkins.io "x-0" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit a50087e07e01a4ed5a76de03cdfb30e53368e33a with issues: User.jenkins.io "x-0" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 81d538f4527c8f0ae1328688535aac6b018a5f95 with issues: User.jenkins.io "x-0" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email jenkins-x@googlegroups.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 81d538f4527c8f0ae1328688535aac6b018a5f95 with issues: User.jenkins.io "x-0" is in*****: metadata.labels: In***** value: "-0": a ***** label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for *****ation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: No release found for jstrachan/godemo48 and tag v0.0.12 so creating a new release
+Updated the release information at https://github.com/jstrachan/godemo48/releases/tag/v0.0.12
+generated: /workspace/source/charts/godemo48/templates/release.yaml
+Created Release godemo48-0-0-12 resource in namespace **
+Updating PipelineActivity jstrachan-godemo48-master-7 with version 0.0.12
+Updated PipelineActivities jstrachan-godemo48-master-7 with release notes URL: https://github.com/jstrachan/godemo48/releases/tag/v0.0.12
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: bucketrepo http://bucketrepo/bucketrepo/charts/
+Successfully added Helm repository bucketrepo.
+Uploading chart file godemo48-0.0.12.tgz to http://bucketrepo/bucketrepo/charts/api/charts
+Received 200 response: 
+
+Showing logs for build [32mjstrachan-godemo48-master-tnf6s-7[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app godemo48 version 0.0.12 to namespace staging
+WARNING: could not find upstream git URL failed to unmarshal  due to no GitConfDir defined
+running command: kpt pkg update godemo48@v0.0.12 --strategy=alpha-git-patch
+pushed merged branch promote-godemo48-0.0.12
+Created Pull Request: https://github.com/jstrachan/env-configsync-bootv3-scratch2/pull/40
+Added label updatebot to Pull Request https://github.com/jstrachan/env-configsync-bootv3-scratch2/pull/40
+WARNING: Failed to query the Pull Request last commit status for https://github.com/jstrachan/env-configsync-bootv3-scratch2/pull/40 ref d4c44e91bd79975ffc8b1296754426e403411f50 Could not find a status for repository jstrachan/env-configsync-bootv3-scratch2 with ref d4c44e91bd79975ffc8b1296754426e403411f50
+Pull Request https://github.com/jstrachan/env-configsync-bootv3-scratch2/pull/40 is merged at sha 9b0cf4dac4a01d15746f42ce930034fd24ea8892
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace staging for names godemo48, **-godemo48, staging-godemo48
